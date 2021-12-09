@@ -50,9 +50,6 @@ seis = 2
 siete = 1
 ocho = 0
 
-printeartablero(tablero)
-
-#posicioninicialpeonesblancos
 
 #def moverunapieza(tablero,a,b,c,d,e,f,g,h,uno,dos,tres,cuatro,cinco,seis,siete,ocho):
     #fila = input("fila donde ESTÁ LA PIEZA QUE DESEAS MOVER >>> ")
@@ -85,40 +82,37 @@ printeartablero(tablero)
 (tablero[1])[6] = PEÓN_NEGRO
 (tablero[1])[7] = PEÓN_NEGRO
 
-printeartablero(tablero)
-
-
-#while True:
-    #inicio = input("Elige la fila y la columna que desea mover")
-    #inicio = inicio.split()
-    #if len(inicio) == 2:
-        #filaI = inicio[0]
-        #columnaI = inicio[1]
-        #try:
-            #filaI = int(filaI)
-            #columnaI = int(columnaI)
-        #except:
-            #pass
-        #else: 
-            #if filaI >= 0 and filaI < 8 and columnaI >= 0 and columnaI < 8:
-                #break
-
-#while True:
-    #final = input("Elige la fila y la columna a la que desea ir")
-    #final = final.split()
-    #if len(final) == 2:
-        #filaF = final[0]
-        #columnaF = final[1]
-        #try:
-            #filaF = int(filaF)
-            #columnaF = int(columnaI)
-        #except:
-            #pass
-        #else:
-            #if filaF >= 0 and filaF < 8 and columnaF >= 0 and columnaF < 8 and final != inicio:
-                #(tablero[filaF])[columnaF] = tablero[filaI][columnaI]
-                #(tablero[filaI][columnaI]) = " "
-                #break
+def moverunapieza(tablero,a,b,c,d,e,f,g,h,uno,dos,tres,cuatro,cinco,seis,siete,ocho):
+    while True:
+        inicio = input("Elige la fila y la columna que desea mover. SEPARA LOS ESPACIOS")
+        inicio = inicio.split()
+        if len(inicio) == 2:
+            filaI = inicio[0]
+            columnaI = inicio[1]
+            try:
+                filaI = int(filaI)
+                columnaI = int(columnaI)
+            except:
+                pass
+            else: 
+                if filaI >= 0 and filaI < 8 and columnaI >= 0 and columnaI < 8:
+                    break
+    while True:
+        final = input("Elige la fila y la columna a la que desea ir")
+        final = final.split()
+        if len(final) == 2:
+            filaF = final[0]
+            columnaF = final[1]
+            try:
+                filaF = int(filaF)
+                columnaF = int(columnaI)
+            except:
+                pass
+            else:
+                if filaF >= 0 and filaF < 8 and columnaF >= 0 and columnaF < 8 and final != inicio:
+                    (tablero[filaF])[columnaF] = tablero[filaI][columnaI]
+                    (tablero[filaI][columnaI]) = " "
+                    break
 
 
 #def moverunapieza(tablero,a,b,c,d,e,f,g,h,uno,dos,tres,cuatro,cinco,seis,siete,ocho):
@@ -129,10 +123,14 @@ printeartablero(tablero)
 
 
 
-fichero = input("ESCOGE UN NOMBRE PARA EL FICHERO>>>>")
-f = open(fichero, "a+", encoding="utf-8")
+#fichero = input("ESCOGE UN NOMBRE PARA EL FICHERO>>>>")
+#f = open(fichero, "a+", encoding="utf-8")
 
 
 
 printeartablero(tablero)
-moverunapieza(tablero,a,b,c,d,e,f,g,h,uno,dos,tres,cuatro,cinco,seis,siete,ocho)
+continuar = "si"
+while continuar != "no":
+    moverunapieza(tablero,a,b,c,d,e,f,g,h,uno,dos,tres,cuatro,cinco,seis,siete,ocho)
+    printeartablero(tablero)
+    continuar("deseas continuar la partida >>>> si / no")
