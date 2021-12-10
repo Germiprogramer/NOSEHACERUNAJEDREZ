@@ -55,6 +55,7 @@ ocho = 0
     #fila = input("fila donde ESTÁ LA PIEZA QUE DESEAS MOVER >>> ")
     #columna = input("columna donde esta la pieza que quieres mover")
     #(tablero[fila])[columna] = " "
+    #(tablero[fila])[columna] = str((tablero[fila])[columna])
     #printeartablero(tablero)
 
 
@@ -123,9 +124,8 @@ def moverunapieza(tablero,a,b,c,d,e,f,g,h,uno,dos,tres,cuatro,cinco,seis,siete,o
 
 
 
-#fichero = input("ESCOGE UN NOMBRE PARA EL FICHERO>>>>")
-#f = open(fichero, "a+", encoding="utf-8")
-
+fichero = input("ESCOGE UN NOMBRE PARA EL FICHERO>>>>")
+f = open(fichero, "a+", encoding="utf-8")
 
 
 printeartablero(tablero)
@@ -133,4 +133,4 @@ continuar = "si"
 while continuar != "no":
     moverunapieza(tablero,a,b,c,d,e,f,g,h,uno,dos,tres,cuatro,cinco,seis,siete,ocho)
     printeartablero(tablero)
-    continuar("deseas continuar la partida >>>> si / no")
+    continuar = input("deseas continuar la partida >>>> si / no")
