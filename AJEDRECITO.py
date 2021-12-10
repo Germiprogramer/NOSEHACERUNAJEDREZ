@@ -94,7 +94,7 @@ PEÓN_NEGRO = chr(0x265F)
 
 def moverunapieza(tablero):
     while True:
-        inicio = input("Elige la fila y la columna que desea mover. SEPARA LOS ESPACIOS")
+        inicio = input("Elige la fila y la columna que desea mover. SEPARA LOS ESPACIOS >  ")
         inicio = inicio.split()
         if len(inicio) == 2:
             filaI = inicio[0]
@@ -108,7 +108,7 @@ def moverunapieza(tablero):
                 if filaI >= 0 and filaI < 8 and columnaI >= 0 and columnaI < 8:
                     break
     while True:
-        final = input("Elige la fila y la columna a la que desea ir")
+        final = input("Elige la fila y la columna a la que desea ir>  ")
         final = final.split()
         if len(final) == 2:
             filaF = final[0]
@@ -139,7 +139,7 @@ f = open(fichero, "a+", encoding="utf-8")
 
 printeartablero(tablero)
 continuar = "si"
-while continuar != "no":
+while continuar != "me rindo":
     moverunapieza(tablero)
     printeartablero(tablero)
-    continuar = input("deseas continuar la partida >>>> si / no")
+    continuar = input("si deseas parar la partida, escribe < me rindo > == ")
