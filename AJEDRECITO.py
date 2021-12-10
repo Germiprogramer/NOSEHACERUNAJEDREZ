@@ -2,7 +2,7 @@ from os import supports_effective_ids, terminal_size
 
 
 tablero =[
-    [" ",' ',' ',' ',' ',' ',' ',' '],
+    [' ',' ',' ',' ',' ',' ',' ',' '],
     [' ',' ',' ',' ',' ',' ',' ',' '],
     [' ',' ',' ',' ',' ',' ',' ',' '],
     [' ',' ',' ',' ',' ',' ',' ',' '],
@@ -32,25 +32,6 @@ ALFIL_NEGRO = chr(0x265D)
 CABALLO_NEGRO = chr(0x265E)
 PEÓN_NEGRO = chr(0x265F)
 
-a = 0
-b = 1
-c = 2
-d = 3
-e = 4
-f = 5
-g = 6
-h = 7
-
-uno = 7
-dos = 6
-tres = 5
-cuatro = 4
-cinco = 3
-seis = 2
-siete = 1
-ocho = 0
-
-
 #def moverunapieza(tablero,a,b,c,d,e,f,g,h,uno,dos,tres,cuatro,cinco,seis,siete,ocho):
     #fila = input("fila donde ESTÁ LA PIEZA QUE DESEAS MOVER >>> ")
     #columna = input("columna donde esta la pieza que quieres mover")
@@ -63,14 +44,14 @@ ocho = 0
 
 
 
-(tablero[dos])[a] = PEÓN_BLANCO
-(tablero[dos])[b] = PEÓN_BLANCO
-(tablero[dos])[c] = PEÓN_BLANCO
-(tablero[dos])[d] = PEÓN_BLANCO
-(tablero[dos])[e] = PEÓN_BLANCO
-(tablero[dos])[f] = PEÓN_BLANCO
-(tablero[dos])[g] = PEÓN_BLANCO
-(tablero[dos])[h] = PEÓN_BLANCO
+(tablero[6])[0] = PEÓN_BLANCO
+(tablero[6])[1] = PEÓN_BLANCO
+(tablero[6])[2] = PEÓN_BLANCO
+(tablero[6])[3] = PEÓN_BLANCO
+(tablero[6])[4] = PEÓN_BLANCO
+(tablero[6])[5] = PEÓN_BLANCO
+(tablero[6])[6] = PEÓN_BLANCO
+(tablero[6])[7] = PEÓN_BLANCO
 
 
 #posicioninicialpeonesnegros
@@ -83,7 +64,34 @@ ocho = 0
 (tablero[1])[6] = PEÓN_NEGRO
 (tablero[1])[7] = PEÓN_NEGRO
 
-def moverunapieza(tablero,a,b,c,d,e,f,g,h,uno,dos,tres,cuatro,cinco,seis,siete,ocho):
+#posicioninicialcaballosblancos
+(tablero[7])[1] = CABALLO_BLANCO
+(tablero[7])[6] = CABALLO_BLANCO
+#posicioninicialcaballosnegros
+(tablero[0])[1] = CABALLO_NEGRO
+(tablero[0])[6] = CABALLO_NEGRO
+#posicioninicialalfilesblancos
+(tablero[7])[2] = ALFIL_BLANCO
+(tablero[7])[5] = ALFIL_BLANCO
+#posicioninicialalfilesnegros
+(tablero[0])[2] = ALFIL_NEGRO
+(tablero[0])[5] = ALFIL_NEGRO
+#posicioninicialtorresblancas
+(tablero[7])[0] = TORRE_BLANCO
+(tablero[7])[7] = TORRE_BLANCO
+#posicioninicialtorresnegras
+(tablero[0])[7] = TORRE_NEGRO
+(tablero[0])[7] = TORRE_NEGRO
+#posicioninicialreinablanca
+(tablero[7])[3] = REINA_BLANCO
+#posicioninicialreinanegra
+(tablero[0])[3] = REINA_NEGRO
+#posicioninicialreyblanco
+(tablero[7])[4] = REY_BLANCO
+#posicioninicialreynegro
+(tablero[0])[4] = REY_NEGRO
+
+def moverunapieza(tablero):
     while True:
         inicio = input("Elige la fila y la columna que desea mover. SEPARA LOS ESPACIOS")
         inicio = inicio.split()
@@ -131,6 +139,6 @@ f = open(fichero, "a+", encoding="utf-8")
 printeartablero(tablero)
 continuar = "si"
 while continuar != "no":
-    moverunapieza(tablero,a,b,c,d,e,f,g,h,uno,dos,tres,cuatro,cinco,seis,siete,ocho)
+    moverunapieza(tablero)
     printeartablero(tablero)
     continuar = input("deseas continuar la partida >>>> si / no")
