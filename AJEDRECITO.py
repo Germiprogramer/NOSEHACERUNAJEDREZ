@@ -2,14 +2,15 @@ from os import supports_effective_ids, terminal_size
 
 
 tablero =[
-    [' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' '],
-    [' ',' ',' ',' ',' ',' ',' ',' ']
+    [' ','1','2','3','4','5','6','7','8'],
+    ['1',' ',' ',' ',' ',' ',' ',' ',' '],
+    ['2',' ',' ',' ',' ',' ',' ',' ',' '],
+    ['3',' ',' ',' ',' ',' ',' ',' ',' '],
+    ['4',' ',' ',' ',' ',' ',' ',' ',' '],
+    ['5',' ',' ',' ',' ',' ',' ',' ',' '],
+    ['6',' ',' ',' ',' ',' ',' ',' ',' '],
+    ['7',' ',' ',' ',' ',' ',' ',' ',' '],
+    ['8',' ',' ',' ',' ',' ',' ',' ',' '],
 ]
 
 def printeartablero(tablero):
@@ -44,52 +45,52 @@ PEÓN_NEGRO = chr(0x265F)
 
 
 
-(tablero[6])[0] = PEÓN_BLANCO
-(tablero[6])[1] = PEÓN_BLANCO
-(tablero[6])[2] = PEÓN_BLANCO
-(tablero[6])[3] = PEÓN_BLANCO
-(tablero[6])[4] = PEÓN_BLANCO
-(tablero[6])[5] = PEÓN_BLANCO
-(tablero[6])[6] = PEÓN_BLANCO
-(tablero[6])[7] = PEÓN_BLANCO
+(tablero[7])[1] = PEÓN_BLANCO
+(tablero[7])[2] = PEÓN_BLANCO
+(tablero[7])[3] = PEÓN_BLANCO
+(tablero[7])[4] = PEÓN_BLANCO
+(tablero[7])[5] = PEÓN_BLANCO
+(tablero[7])[6] = PEÓN_BLANCO
+(tablero[7])[7] = PEÓN_BLANCO
+(tablero[7])[8] = PEÓN_BLANCO
 
 
 #posicioninicialpeonesnegros
-(tablero[1])[0] = PEÓN_NEGRO
-(tablero[1])[1] = PEÓN_NEGRO
-(tablero[1])[2] = PEÓN_NEGRO
-(tablero[1])[3] = PEÓN_NEGRO
-(tablero[1])[4] = PEÓN_NEGRO
-(tablero[1])[5] = PEÓN_NEGRO
-(tablero[1])[6] = PEÓN_NEGRO
-(tablero[1])[7] = PEÓN_NEGRO
+(tablero[2])[1] = PEÓN_NEGRO
+(tablero[2])[2] = PEÓN_NEGRO
+(tablero[2])[3] = PEÓN_NEGRO
+(tablero[2])[4] = PEÓN_NEGRO
+(tablero[2])[5] = PEÓN_NEGRO
+(tablero[2])[6] = PEÓN_NEGRO
+(tablero[2])[7] = PEÓN_NEGRO
+(tablero[2])[8] = PEÓN_NEGRO
 
 #posicioninicialcaballosblancos
-(tablero[7])[1] = CABALLO_BLANCO
-(tablero[7])[6] = CABALLO_BLANCO
+(tablero[8])[2] = CABALLO_BLANCO
+(tablero[8])[7] = CABALLO_BLANCO
 #posicioninicialcaballosnegros
-(tablero[0])[1] = CABALLO_NEGRO
-(tablero[0])[6] = CABALLO_NEGRO
+(tablero[1])[2] = CABALLO_NEGRO
+(tablero[1])[7] = CABALLO_NEGRO
 #posicioninicialalfilesblancos
-(tablero[7])[2] = ALFIL_BLANCO
-(tablero[7])[5] = ALFIL_BLANCO
+(tablero[8])[3] = ALFIL_BLANCO
+(tablero[8])[6] = ALFIL_BLANCO
 #posicioninicialalfilesnegros
-(tablero[0])[2] = ALFIL_NEGRO
-(tablero[0])[5] = ALFIL_NEGRO
+(tablero[1])[3] = ALFIL_NEGRO
+(tablero[1])[6] = ALFIL_NEGRO
 #posicioninicialtorresblancas
-(tablero[7])[0] = TORRE_BLANCO
-(tablero[7])[7] = TORRE_BLANCO
+(tablero[8])[1] = TORRE_BLANCO
+(tablero[8])[8] = TORRE_BLANCO
 #posicioninicialtorresnegras
-(tablero[0])[7] = TORRE_NEGRO
-(tablero[0])[7] = TORRE_NEGRO
+(tablero[1])[1] = TORRE_NEGRO
+(tablero[1])[8] = TORRE_NEGRO
 #posicioninicialreinablanca
-(tablero[7])[3] = REINA_BLANCO
+(tablero[8])[4] = REINA_BLANCO
 #posicioninicialreinanegra
-(tablero[0])[3] = REINA_NEGRO
+(tablero[1])[4] = REINA_NEGRO
 #posicioninicialreyblanco
-(tablero[7])[4] = REY_BLANCO
+(tablero[8])[5] = REY_BLANCO
 #posicioninicialreynegro
-(tablero[0])[4] = REY_NEGRO
+(tablero[1])[5] = REY_NEGRO
 
 def moverunapieza(tablero):
     while True:
