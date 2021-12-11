@@ -129,7 +129,7 @@ def moverunapieza(tablero):
             columnaF = final[1]
             try:
                 filaF = int(filaF)
-                columnaF = int(columnaI)
+                columnaF = int(columnaF)
             except:
                 pass
             else:
