@@ -135,7 +135,21 @@ def moverunapieza(tablero):
 
 fichero = input("ESCOGE UN NOMBRE PARA EL FICHERO>>>>")
 f = open(fichero, "a+", encoding="utf-8")
+def tablerofichero(tablero):
+    for x in range(9):
+        f.write("\n")
+        for y in range(9):
+            f.write(str((tablero[y])[x]))
+            f.write(" ")
+    f.write("\n")
 
+def leertablero(tablero):
+    f.seek(0)
+    lineas = f.readlines()
+    printeartablero(tablero)
+
+tablerofichero(tablero)
+leertablero(tablero)
 
 printeartablero(tablero)
 continuar = "si"
