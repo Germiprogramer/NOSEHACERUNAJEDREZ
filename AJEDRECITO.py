@@ -33,18 +33,7 @@ ALFIL_NEGRO = chr(0x265D)
 CABALLO_NEGRO = chr(0x265E)
 PEÓN_NEGRO = chr(0x265F)
 
-#def moverunapieza(tablero,a,b,c,d,e,f,g,h,uno,dos,tres,cuatro,cinco,seis,siete,ocho):
-    #fila = input("fila donde ESTÁ LA PIEZA QUE DESEAS MOVER >>> ")
-    #columna = input("columna donde esta la pieza que quieres mover")
-    #(tablero[fila])[columna] = " "
-    #(tablero[fila])[columna] = str((tablero[fila])[columna])
-    #printeartablero(tablero)
-
-
-
-
-
-
+#posicioninicialpeonesblancos
 (tablero[7])[1] = PEÓN_BLANCO
 (tablero[7])[2] = PEÓN_BLANCO
 (tablero[7])[3] = PEÓN_BLANCO
@@ -138,14 +127,6 @@ def moverunapieza(tablero):
                     (tablero[filaI][columnaI]) = " "
                     break
 
-
-#def moverunapieza(tablero,a,b,c,d,e,f,g,h,uno,dos,tres,cuatro,cinco,seis,siete,ocho):
-    #fila = input("fila donde ESTÁ LA PIEZA QUE DESEAS MOVER >>> ")
-    #columna = input("columna donde esta la pieza que quieres mover")
-    #(tablero[fila])[columna] = " "
-    #printeartablero(tablero)
-
-
 leertablero(tablero)
 
 printeartablero(tablero)
@@ -153,4 +134,5 @@ continuar = "si"
 while continuar != "me rindo":
     moverunapieza(tablero)
     printeartablero(tablero)
+    leertablero(tablero)
     continuar = input("si deseas parar la partida, escribe < me rindo > == ")
