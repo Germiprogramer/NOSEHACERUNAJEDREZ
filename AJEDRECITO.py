@@ -108,7 +108,7 @@ def moverunapieza(tablero):
             except:
                 pass
             else: 
-                if filaI >= 0 and filaI < 8 and columnaI >= 0 and columnaI < 8:
+                if filaI >= 1 and filaI < 8 and columnaI >= 1 and columnaI < 8:
                     break
     while True:
         final = input("Elige la fila y la columna a la que desea ir>  ")
